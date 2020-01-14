@@ -8,14 +8,9 @@ dotenv.config();
 
 const app = express();
 
-const users = require("./routes/users");
-
 app.use(express.static(__dirname + "/src"));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-app.use("/users", users);
 
 app.use("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "src", "index.html"));

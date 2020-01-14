@@ -1,0 +1,11 @@
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    &--default{
+        color: #000000;
+    }
+    &--small{
+        font-size: 15px;
+    }
+}
