@@ -1,0 +1,9 @@
+.header{
+    .header__container{
+        padding: 2rem 2rem;
+    }
+    &--default{
+        color: #000000;
+        background-color: gray;
+    }
+}

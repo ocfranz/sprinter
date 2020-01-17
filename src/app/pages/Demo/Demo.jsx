@@ -1,11 +1,10 @@
 import React from "react";
-import { render } from "react-dom";
 
-import Button from '../components/Button';
-import Title from '../components/Title';
-import Header from '../modules/Header';
+import Button from '../../components/Button';
+import Title from '../../components/Title';
+import Header from '../../modules/Header';
 
-class Home extends React.Component {
+class Demo extends React.Component {
 
   onClickButton(){
     console.log('click');
@@ -13,6 +12,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="page">
+        <a href="/home">Go to home</a>
         <Header />
         
         <Button children="Click me"/>
@@ -25,4 +25,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Demo;
