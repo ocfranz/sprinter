@@ -1,2 +1,2 @@
-import Logo from './Logo';
+import Logo from './Logo.jsx';
 export default Logo;

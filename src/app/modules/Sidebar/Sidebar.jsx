@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import './Sidebar.scss';
 import Brand from '../../components/Brand';
 import Link from '../../components/Link';
+import SidebarMenu from '../SidebarMenu';
+import Divider from '../../components/Divider';
 const Sidebar = ({className})=>{
     return(
         <div className={`sidebar ${className}`}>
@@ -12,8 +14,8 @@ const Sidebar = ({className})=>{
                     <Brand children="Sprinter" />
                 </div>
                 <div className="sidebar__links">
-                    <Link children="Dashboard" href="/dashboard"/>
-                    <Link children="Dashboard" href="/projects"/>
+                    <SidebarMenu /> 
+                    <Divider className="simple-divider--white"/>
                 </div>    
             </div> 
         </div>

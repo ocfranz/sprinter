@@ -1,0 +1,10 @@
+.simple-divider{
+    &--default{
+        background-color: #000000;
+        opacity: 0.7;
+    }
+    &--white{
+        background-color: #ffffff;
+        opacity: 0.4;
+    }
+}
