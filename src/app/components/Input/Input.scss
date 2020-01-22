@@ -1,0 +1,11 @@
+.simple-input{
+    border: 0;
+    background-color: transparent;
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    &--default{
+        border-bottom: 1px solid #000000;
+    }
+}

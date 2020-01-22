@@ -1,6 +1,17 @@
 .header{
     .header__container{
-        padding: 2rem 2rem;
+        padding: 1rem 0.5rem;
+        @media screen and (min-width: 992px){
+            padding: 1rem 3rem;
+        }
+        .header__brand{
+        }
+        .header__search{
+        }
+        .header__user{
+            display: flex;
+            justify-content: flex-end;
+        }
     }
     &--default{
         color: #000000;
