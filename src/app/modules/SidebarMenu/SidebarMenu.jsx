@@ -11,7 +11,8 @@ const SidebarMenu = ({ className, listMenu}) =>{
                 <li class="list-group-item sidebar-menu__item sidebar-menu__item-active">
                     <Link children={
                         <>
-                        <span>Home</span>
+                        <i className="icon icon-edit"></i>
+                        
                         </>
                     } 
                     href="/home"
@@ -20,7 +21,7 @@ const SidebarMenu = ({ className, listMenu}) =>{
                 <li class="list-group-item">
                     <Link children={
                         <>
-                        <span>Dashboard</span>
+                        <i className="icon icon-edit"></i>
                         </>
                     } 
                     href="/dashboard"
@@ -29,7 +30,7 @@ const SidebarMenu = ({ className, listMenu}) =>{
                 <li class="list-group-item">
                     <Link children={
                         <>
-                        <span>Proyectos</span>
+                        <i className="icon icon-like"></i>
                         </>
                     } />
                 </li>

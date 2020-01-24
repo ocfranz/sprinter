@@ -1,0 +1,35 @@
+@font-face {
+	font-family: "webfonts";
+	src: url("#{$font-path}/webfonts.eot?155e53f1c9185e56de0a3e4b1ac36594?#iefix") format("embedded-opentype"),
+url("#{$font-path}/webfonts.ttf?155e53f1c9185e56de0a3e4b1ac36594") format("truetype"),
+url("#{$font-path}/webfonts.woff2?155e53f1c9185e56de0a3e4b1ac36594") format("woff2"),
+url("#{$font-path}/webfonts.woff?155e53f1c9185e56de0a3e4b1ac36594") format("woff"),
+url("#{$font-path}/webfonts.svg?155e53f1c9185e56de0a3e4b1ac36594#webfonts") format("svg");
+}
+
+.icon {
+	line-height: 1;
+}
+
+.icon:before {
+	font-family: webfonts !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.icon-edit:before {
+	content: "\f101";
+}
+.icon-email:before {
+	content: "\f102";
+}
+.icon-heart:before {
+	content: "\f103";
+}
+.icon-like:before {
+	content: "\f104";
+}
+.icon-star:before {
+	content: "\f105";
+}

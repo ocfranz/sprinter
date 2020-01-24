@@ -9,8 +9,7 @@ const Home = ({className}) =>{
 
     return(
         <div className={`home-page ${className}`}>
-            <Header />
-           
+            <Sidebar />
         </div>
     )
 }

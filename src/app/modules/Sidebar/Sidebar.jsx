@@ -11,11 +11,12 @@ const Sidebar = ({className})=>{
         <div className={`sidebar ${className}`}>
             <div className="sidebar__wrapper">
                 <div className="sidebar__header">
-                    <Brand children="Sprinter" />
+                    
                 </div>
                 <div className="sidebar__links">
                     <SidebarMenu /> 
-                    <Divider className="simple-divider--white"/>
+
+                   
                 </div>    
             </div> 
         </div>
