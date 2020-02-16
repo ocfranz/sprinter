@@ -1,6 +1,8 @@
 import React from "react";
 
 import Button from '../../components/Button';
+
+import { colors } from '../../styles/colors';
 class Demo extends React.Component {
 
   onClickButton(){
@@ -9,8 +11,10 @@ class Demo extends React.Component {
   render() {
     return (
       <div className="page">
-        <a href="/home">Go to home</a>
-        <Button children="Button"/>
+        <Button onClick={()=>this.onClickButton()} fill={colors.secondary}>Hello</Button> 
+        <Button onClick={()=>this.onClickButton()}>Hello</Button>    
+        <Button onClick={()=>this.onClickButton()} primary>Hello</Button>   
+            
       </div>
     );
   }

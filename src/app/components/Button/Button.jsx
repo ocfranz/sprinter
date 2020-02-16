@@ -1,23 +1,25 @@
-import React from 'React';
 import PropTypes from 'prop-types';
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-const StyledButton = styled.button`
-    background-color: #220FFF;
-    padding : 18px 32px;
+import { colors } from '../../styles/colors';
+
+const Button = styled.button`
+    padding : 10px 32px;
     border: 0;
-    
+    margin: 0px 10px;
+    &:focus{
+        outline : none;
+        box-shadow: none;
+    }
+    ${props =>
+        props.primary &&
+        css`
+          background: #0e30f0;
+    `}
 `; 
-const Button = ({ children, handleOnClick}) => {
-    return(
-        <StyledButton onClick={handleOnClick}>{children}</StyledButton>
-    );
-}
-
 
 Button.propTypes = {
-    children : PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-    handleOnClick : PropTypes.func.isRequired
+    onClick : PropTypes.func.isRequired
 }
 
 export default Button;
