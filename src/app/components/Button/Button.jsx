@@ -1,20 +1,22 @@
 import React from 'React';
 import PropTypes from 'prop-types';
-import './Button.scss';
+import styled from 'styled-components'
 
-const Button = ({className, children, handleOnClick}) => {
+const StyledButton = styled.button`
+    background-color: #220FFF;
+    padding : 18px 32px;
+    border: 0;
+    
+`; 
+const Button = ({ children, handleOnClick}) => {
     return(
-        <button className={`button-action ${className}`} onclick={handleOnClick}>{children}</button>
+        <StyledButton onClick={handleOnClick}>{children}</StyledButton>
     );
 }
 
-Button.defaultProps = {
-    className : 'button-action--default'
-}
 
 Button.propTypes = {
-    className : PropTypes.string,
-    children : PropTypes.oneOf([PropTypes.string, PropTypes.element]).isRequired,
+    children : PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     handleOnClick : PropTypes.func.isRequired
 }
 
