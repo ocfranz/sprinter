@@ -5,5 +5,6 @@ export const colors = {
     ligth : '#edf7fa',
     dark : '#ff8364',
     textColor : '#ffffff',
-    borderDark : '#464854'
+    borderDark : '#464854',
+    sidebarDefault : "#ADABBC"
 }

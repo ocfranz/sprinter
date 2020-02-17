@@ -3,16 +3,15 @@ import styled from 'styled-components';
 import Page from '../../components/Page';
 import Container from '../../components/Container';
 import Sidebar from '../../modules/Sidebar';
-const Home = ({})=>{
-
+const Team = ({})=>{
     return(
         <Page>
             <Sidebar />
             <Container fullpage={true}>
-                hello
+                Team
             </Container>
         </Page>
     );
 }
 
-export default Home;
+export default Team;

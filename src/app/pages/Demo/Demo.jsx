@@ -24,7 +24,7 @@ class Demo extends React.Component {
         <div className="page">
             <Grid>
                 <Title>Grid System</Title>
-                <Container>
+                <Container padd>
                     <span>Small</span>
                     <Row>
                         <Column sm={3} filled>
@@ -40,7 +40,7 @@ class Demo extends React.Component {
                 </Container>
                 
                 <Title>Buttons</Title>
-                <Container>
+                <Container padd>
                     <Title small>Filled</Title>
                     <Row>
                         <Column sm={2} md={3} lg={3}>
@@ -69,7 +69,7 @@ class Demo extends React.Component {
                         </Column>
                     </Row>
                 </Container>
-                <Container>
+                <Container padd>
                     <Title small>Outline</Title>
                     <Row>
                         <Column sm={2} md={3} lg={3}>
@@ -98,7 +98,7 @@ class Demo extends React.Component {
                         </Column>
                     </Row>
                 </Container>
-                <Container>
+                <Container padd={true}>
                     <Title>Sidebar</Title>
 
                     <Sidebar />
