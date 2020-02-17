@@ -1,7 +1,8 @@
 const express = require('express');
-const router = express.Router();
-const config = require('../config.js');
+const mongoose = require('mongoose');
 const path = require('path');
+const router = express.Router();
+const config = require('../config/config');
 
 mongoose.connect(
   config.connection,
