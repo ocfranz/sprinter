@@ -6,7 +6,8 @@ import { colors } from '../../styles/colors';
 const Button = styled.button`
     padding : 10px 32px;
     border: 0;
-    margin: 0px 10px;
+    margin: 0px 10px 0px 0px;
+    border-radius : 5px;
     &:focus{
         outline : none;
         box-shadow: none;
@@ -14,8 +15,23 @@ const Button = styled.button`
     ${props =>
         props.primary &&
         css`
-          background: #0e30f0;
+          background-color: ${colors.primary};
+          color: #ffffff;
     `}
+    ${props =>
+        props.secondary &&
+        css`
+            background-color : ${colors.secondary}; 
+            color: #ffffff;
+        `
+    }
+    ${props =>
+        props.success &&
+        css`
+            background-color : ${colors.secondary}; 
+        `
+    }
+
 `; 
 
 Button.propTypes = {
