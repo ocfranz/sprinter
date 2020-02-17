@@ -3,13 +3,18 @@ const router = express.Router();
 const config = require('../config.js');
 const path = require('path');
 
+mongoose.connect(
+  config.connection,
+  {useUnifiedTopology: true, useNewUrlParser : true}
+  , (err)=>{
+  if(err){
+      console.log('Error', err);
+  }else{
+      console.log('Conected');
+  }
+})
 router.get('/', function(req, res, next) {
   res.sendFile(path.resolve(__dirname, '..', 'src', 'index.html'));
 })
-
-router.get('/getUsers', function(req, res, next) {
-  // GET/users/ route
-  res.send({name:config.admin.name});
-});
 
 module.exports = router;
