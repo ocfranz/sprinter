@@ -6,7 +6,7 @@ const Grid = styled.div`
     margin: auto 15px;
     ${media.sm`margin: auto 50px;`}
     ${media.md`margin: auto 100px;`}
-    ${media.lg`margin: auto 300px`}
+    ${media.lg`margin: auto 200px`}
 `;
 
 export default Grid;

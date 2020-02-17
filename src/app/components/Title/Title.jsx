@@ -7,7 +7,8 @@ const Title = styled.span`
     font-weight : bold;
     margin-bottom : 10px;
     display : block;
-    ${props => props.small && css` font-size : 16px; font-weight: normal;`}
+    text-align: center;
+    ${props => props.small && css` font-size : 16px; font-weight: normal;text-align: left;`}
     ${media.lg`font-size : 20px;`}
 
 `;

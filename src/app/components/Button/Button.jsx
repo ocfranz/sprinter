@@ -26,9 +26,24 @@ const Button = styled.button`
         `
     }
     ${props =>
-        props.success &&
-        css`
-            background-color : ${colors.secondary}; 
+        props.success && css`background-color : ${colors.secondary};`
+    }
+    ${ props =>
+        (props.outline) &&  css`
+            background-color: transparent;
+            border: 1px solid ${colors.default};
+        `
+    }
+    ${ props =>
+        (props.outline && props.primary) &&  css`
+            border : 1px solid ${colors.primary};
+            color :  ${colors.primary};
+        `
+    }
+    ${ props =>
+        (props.outline && props.secondary) &&  css`
+            border : 1px solid ${colors.secondary};
+            color :  ${colors.secondary};
         `
     }
 
