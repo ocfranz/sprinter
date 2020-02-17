@@ -10,7 +10,9 @@ import Row from '../../components/Row';
 import Column from '../../components/Column';
 import Code from '../../components/Code';
 
+
 import ComponentContainer from '../../modules/ComponentContainer';
+import Sidebar from '../../modules/Sidebar';
 
 class Demo extends React.Component {
 
@@ -95,6 +97,12 @@ class Demo extends React.Component {
                             </ComponentContainer>
                         </Column>
                     </Row>
+                </Container>
+                <Container>
+                    <Title>Sidebar</Title>
+
+                    <Sidebar />
+
                 </Container>
                 
             </Grid>

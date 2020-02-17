@@ -1,10 +1,10 @@
 @font-face {
 	font-family: "webfonts";
-	src: url("#{$font-path}/webfonts.eot?824a7ccd63289998a545cb7cba7fbf9e?#iefix") format("embedded-opentype"),
-url("#{$font-path}/webfonts.ttf?824a7ccd63289998a545cb7cba7fbf9e") format("truetype"),
-url("#{$font-path}/webfonts.woff2?824a7ccd63289998a545cb7cba7fbf9e") format("woff2"),
-url("#{$font-path}/webfonts.woff?824a7ccd63289998a545cb7cba7fbf9e") format("woff"),
-url("#{$font-path}/webfonts.svg?824a7ccd63289998a545cb7cba7fbf9e#webfonts") format("svg");
+	src: url("#{$font-path}/webfonts.eot?a18595e6ff6572eb32700476522fe22b?#iefix") format("embedded-opentype"),
+url("#{$font-path}/webfonts.ttf?a18595e6ff6572eb32700476522fe22b") format("truetype"),
+url("#{$font-path}/webfonts.woff2?a18595e6ff6572eb32700476522fe22b") format("woff2"),
+url("#{$font-path}/webfonts.woff?a18595e6ff6572eb32700476522fe22b") format("woff"),
+url("#{$font-path}/webfonts.svg?a18595e6ff6572eb32700476522fe22b#webfonts") format("svg");
 }
 
 .icon {
@@ -18,18 +18,27 @@ url("#{$font-path}/webfonts.svg?824a7ccd63289998a545cb7cba7fbf9e#webfonts") form
 	vertical-align: top;
 }
 
-.icon-edit:before {
+.icon-chart:before {
 	content: "\f101";
 }
-.icon-email:before {
+.icon-edit:before {
 	content: "\f102";
 }
-.icon-heart:before {
+.icon-email:before {
 	content: "\f103";
 }
-.icon-like:before {
+.icon-heart:before {
 	content: "\f104";
 }
-.icon-star:before {
+.icon-like:before {
 	content: "\f105";
+}
+.icon-star:before {
+	content: "\f106";
+}
+.icon-task:before {
+	content: "\f107";
+}
+.icon-users:before {
+	content: "\f108";
 }
