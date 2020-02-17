@@ -1,19 +1,30 @@
 const express = require("express");
 const http = require("http");
 const path = require("path");
+const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
-const usersRoute = require('./routes/users');
-
+const config= require('./config/config');
 dotenv.config();
 
 const app = express();
+const usersRoute = require('./routes/users');
 
 app.use(express.static(__dirname + "/src"));
 app.use(express.static(__dirname + "/assets"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+mongoose.connect(
+  config.connection,
+  {useUnifiedTopology: true, useNewUrlParser : true}
+  , (err)=>{
+  if(err){
+      console.log('Error', err);
+  }else{
+      console.log('Conected');
+  }
+})
 app.use('/users', usersRoute);
 
 app.listen(process.env.PORT, () =>
