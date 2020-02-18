@@ -4,6 +4,7 @@ const path = require("path");
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
+
 const config= require('./config/config');
 dotenv.config();
 
@@ -16,16 +17,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 mongoose.connect(
-  config.connection,
-  {useUnifiedTopology: true, useNewUrlParser : true}
-  , (err)=>{
-  if(err){
-      console.log('Error', err);
-  }else{
-      console.log('Conected');
-  }
+    config.connection,
+    {useUnifiedTopology: true, useNewUrlParser : true,  useCreateIndex: true}
+    , (err)=>{
+        if(err){
+            console.log('Error', err);
+        }else{
+            console.log('Conected');
+        }
 })
+
 app.use('/users', usersRoute);
+
+app.use("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "src", "index.html"));
+});
 
 app.listen(process.env.PORT, () =>
   console.log(`Server is listening on port ${process.env.PORT}`)
