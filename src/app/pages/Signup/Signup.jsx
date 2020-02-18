@@ -8,16 +8,38 @@ import Input from '../../components/Input';
 import Container from '../../components/Container';
 import Button from '../../components/Button';
 const Signup = ({}) => {
+    const [ validUsername , setValidUsername ] = useState(true);
+    const [ validUseremail , setValidUseremail ] = useState(true);
     const [ user , setUser ] = useState({}); 
 
     const handleInputChange = (event) => {
         const { target } = event;
         switch(target.id){
             case 'username':
-                setUser({ ...user, username : target.value})
+                axios.post('/users/check-name', { attribute : "username", username : target.value})
+                .then( response => {
+                    const { valid } = response.data;
+                    if(valid ){
+                        setUser({ ...user, username : target.value}); 
+                        setValidUsername(true);
+                    }else{
+                        setValidUsername(false);
+                    }
+                })
+                .catch( err => console.log(err));
                 break;
             case 'email':
-                setUser({ ...user, email : target.value})
+                axios.post('/users/check-name', { attribute : "email", email : target.value})
+                .then( response => {
+                    const { valid } = response.data;
+                    if(valid ){
+                        setUser({ ...user, email : target.value}) 
+                        setValidUseremail(true);
+                    }else{
+                        setValidUseremail(false);
+                    }
+                })
+                .catch( err => console.log(err));
                 break;
             case 'password':
                 setUser({ ...user, password : target.value})
@@ -28,8 +50,6 @@ const Signup = ({}) => {
             default :
                 throw new Error('Error input types on signup');
         }
-        console.log(user);
-       
     }
     const handleOnSubmitClick = ()=>{
         axios.post('/users', user)
@@ -41,9 +61,9 @@ const Signup = ({}) => {
             <Title>Sign up</Title>
             <div style={{ width : '30%', margin : "auto auto"}}>
                 <label htmlFor="">Username</label>
-                <Input id="username" type="text" onChange={(e)=>handleInputChange(e)}></Input>
+                <Input id="username" type="text" onChange={(e)=>handleInputChange(e)} valid={validUsername}></Input>
                 <label htmlFor="">Email</label>
-                <Input id="email" type="email" onChange={(e)=>handleInputChange(e)}></Input>
+                <Input id="email" type="email" onChange={(e)=>handleInputChange(e)} valid={validUseremail}></Input>
                 <label htmlFor="">password</label>
                 <Input id="password" type="password" onChange={(e)=>handleInputChange(e)}></Input>
                 <label htmlFor="">Name</label>

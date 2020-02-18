@@ -14,4 +14,26 @@ router.post('/', function(req, res, next) {
     })
 })
 
+router.post('/check-name', async function(req, res, next){
+    const { attribute } = req.body;
+    let user = null;
+    switch (attribute){
+        case "username":
+            const { username } = req.body;
+            user = await User.findOne({ username : username}).exec();
+            break;
+        case "email":
+            const { email } = req.body;
+            user = await User.findOne({ email : email}).exec();
+            break;
+        default:
+            throw new Error('Error: validation attribute');
+    }
+    if(!user){
+        res.json({ data : `Valid ${attribute}`, valid : true});
+    }else{
+        res.json({ data : `Invalid ${attribute}`, valid : false});
+    }
+})
+
 module.exports = router;
