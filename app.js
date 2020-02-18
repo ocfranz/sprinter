@@ -27,7 +27,7 @@ mongoose.connect(
         }
 })
 
-app.use('/users', usersRoute);
+app.use('/user', usersRoute);
 
 app.use("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "src", "index.html"));

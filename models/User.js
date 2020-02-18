@@ -26,5 +26,7 @@ UserSchema.pre('save', function(next){
     this.password = bcrypt.hashSync(this.password, 10);
     next(); 
 });
-
+UserSchema.methods.comparePassword = function( password , callback) {
+    return callback(null, Bcrypt.compareSync(password, this.password));
+};
 module.exports = mongoose.model('Users', UserSchema);

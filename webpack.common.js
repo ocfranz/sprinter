@@ -9,7 +9,7 @@ const SCSS_DIR = path.resolve(__dirname, "src/scss");
 const SRC = path.resolve(__dirname, "src");
 const LIB = path.resolve(__dirname, "assets/lib");
 
-require('./assets/docs'); //Generate iconfonts uncomment for use
+//require('./assets/docs'); //Generate iconfonts uncomment for use
 
 var config = {
   context: SRC,

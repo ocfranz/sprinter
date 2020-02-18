@@ -9,6 +9,7 @@ import Demo from './pages/Demo';
 import Home from './pages/Home';
 import Team from './pages/Team';
 import Signup from './pages/Signup';
+import Login from './pages/Login';
 render(
   <Router>
     <Switch>
@@ -16,6 +17,7 @@ render(
       <Route exact path="/home" component={Home} />
       <Route exact path="/team" component={Team} />
       <Route exact path="/signup" component={Signup} />
+      <Route exact path="/login" component={Login} />
     </Switch>
   </Router>,
   document.getElementById("app")
